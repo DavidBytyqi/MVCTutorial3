@@ -1,0 +1,32 @@
+﻿@model MVCTutorial3.Models.EmployeeViewModel
+@{
+    ViewBag.Title = "EmployeeDetail";
+    Layout = null;
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<div class="container">
+    <h2>EmployeeDetail</h2>
+    <table class="table table-striped" style="width:60%; align-content:center;">
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Department ID
+            <th>Department Name</th>
+            <th>Address</th>
+        </tr>
+        <tbody>
+            @if (Model != null)
+            {    
+                    <tr>
+                        <td>@Model.EmployeeId</td>
+                        <td>@Model.Emri</td>
+                        <td>@Model.DepartmentId</td>
+                        <td>@Model.DepartmentName</td>
+                        <td>@Model.Address</td>
+                    </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
